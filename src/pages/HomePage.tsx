@@ -4,7 +4,7 @@ import { cn } from '../utils/cn'
 
 const HomePage = () => {
   const backgroundImageStyle: CSSProperties = {
-    backgroundImage: 'url("bg-01.webp")',
+    backgroundImage: 'url("bg.webp")',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'center',

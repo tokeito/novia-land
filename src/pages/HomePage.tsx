@@ -1,5 +1,6 @@
 import { Tooltip, UnstyledButton } from '@mantine/core'
 import type { CSSProperties } from 'react'
+import { R18NoticeDialog } from '@/components/shared/Dialog/R18NoticeDialog'
 import { cn } from '@/utils/cn'
 
 const HomePage = () => {
@@ -63,6 +64,8 @@ const HomePage = () => {
           </Tooltip>
         </div>
       </div>
+
+      <R18NoticeDialog />
     </div>
   )
 }

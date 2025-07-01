@@ -1,6 +1,6 @@
 import { Tooltip, UnstyledButton } from '@mantine/core'
 import type { CSSProperties } from 'react'
-import { cn } from '../utils/cn'
+import { cn } from '@/utils/cn'
 
 const HomePage = () => {
   const backgroundImageStyle: CSSProperties = {

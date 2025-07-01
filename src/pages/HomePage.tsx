@@ -1,4 +1,4 @@
-import { Tooltip } from '@ark-ui/react'
+import { Tooltip, UnstyledButton } from '@mantine/core'
 import type { CSSProperties } from 'react'
 import { cn } from '../utils/cn'
 
@@ -24,46 +24,43 @@ const HomePage = () => {
         </div>
 
         <div className="flex gap-4 justify-center">
-          <a
+          <UnstyledButton
+            component="a"
             href="https://amaki.kiyume.top/"
             rel="noopener noreferrer"
             target="_blank"
             className="bg-blue-400 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-colors duration-200 backdrop-blur-sm"
           >
             小说站
-          </a>
-          <Tooltip.Root
-            openDelay={0}
-            closeDelay={200}
-            positioning={{ placement: 'top' }}
+          </UnstyledButton>
+          <Tooltip
+            label="🚧 建设中"
+            transitionProps={{
+              duration: 200,
+              transition: 'pop',
+            }}
           >
-            <Tooltip.Trigger className="bg-blue-200 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-colors duration-200 backdrop-blur-sm">
+            <UnstyledButton
+              className="bg-blue-200 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-colors duration-200 backdrop-blur-sm"
+              disabled
+            >
               插图站
-            </Tooltip.Trigger>
-            <Tooltip.Positioner>
-              <Tooltip.Content>
-                <span className="text-white bg-black py-1 px-2 rounded-lg">
-                  🚧 建设中
-                </span>
-              </Tooltip.Content>
-            </Tooltip.Positioner>
-          </Tooltip.Root>
-          <Tooltip.Root
-            openDelay={0}
-            closeDelay={200}
-            positioning={{ placement: 'top' }}
+            </UnstyledButton>
+          </Tooltip>
+          <Tooltip
+            label="🚧 建设中"
+            transitionProps={{
+              duration: 200,
+              transition: 'pop',
+            }}
           >
-            <Tooltip.Trigger className="bg-blue-200 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-colors duration-200 backdrop-blur-sm">
+            <UnstyledButton
+              className="bg-blue-200 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-colors duration-200 backdrop-blur-sm"
+              disabled
+            >
               百科站
-            </Tooltip.Trigger>
-            <Tooltip.Positioner>
-              <Tooltip.Content>
-                <span className="text-white bg-black py-1 px-2 rounded-lg">
-                  🚧 建设中
-                </span>
-              </Tooltip.Content>
-            </Tooltip.Positioner>
-          </Tooltip.Root>
+            </UnstyledButton>
+          </Tooltip>
         </div>
       </div>
     </div>

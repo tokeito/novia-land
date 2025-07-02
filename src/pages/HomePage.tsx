@@ -4,18 +4,14 @@ import { R18NoticeDialog } from '@/components/shared/Dialog/R18NoticeDialog'
 import { cn } from '@/utils/cn'
 import ParallaxModule from 'parallax-js'
 
-let Parallax: any = null
-
 const HomePage = () => {
   const sceneRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const loadParallax = async () => {
       try {
-        Parallax = ParallaxModule
-
-        if (sceneRef.current && Parallax) {
-          const parallaxInstance = new Parallax(sceneRef.current, {
+        if (sceneRef.current) {
+          const parallaxInstance = new ParallaxModule(sceneRef.current, {
             relativeInput: true,
             clipRelativeInput: false,
             hoverOnly: false,

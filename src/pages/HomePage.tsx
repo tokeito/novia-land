@@ -17,16 +17,16 @@ const HomePage = () => {
         if (sceneRef.current && Parallax) {
           const parallaxInstance = new Parallax(sceneRef.current, {
             relativeInput: true,
-            clipRelativeInput: true,
+            clipRelativeInput: false,
             hoverOnly: false,
             invertX: false,
             invertY: false,
-            scalarX: 5,
-            scalarY: 5,
-            limitX: 10,
-            limitY: 10,
-            frictionX: 0.05,
-            frictionY: 0.05,
+            scalarX: 12,
+            scalarY: 12,
+            limitX: 30,
+            limitY: 30,
+            frictionX: 0.03,
+            frictionY: 0.03,
           })
 
           return () => {
@@ -46,16 +46,27 @@ const HomePage = () => {
       <div
         ref={sceneRef}
         id="scene"
-        className="absolute inset-0 z-0 overflow-hidden"
+        className="absolute inset-0 z-0 overflow-visible"
+        style={{ width: '100%', height: '100%' }}
       >
         <div
           data-depth="0.2"
-          className="w-[100%] h-[100%] absolute"
-          style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)', height: '100vh'}}
+          className="absolute"
+          style={{
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '100%',
+            height: '100vh',
+            overflow: 'visible',
+          }}
         >
           <div
             className="w-full h-full bg-no-repeat bg-cover bg-center"
-            style={{ backgroundImage: 'url("/bg.webp")' }}
+            style={{
+              backgroundImage: 'url("/bg.webp")',
+              transform: 'scale(1.2)',
+            }}
           />
         </div>
       </div>
